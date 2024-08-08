@@ -1,0 +1,28 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Example</title>
+</head>
+<body>
+    <h1>Welcome to the File Download Page</h1>
+    <form action="{{ url_for('download_file') }}" method="get">
+        <label for="data">Data:</label>
+        <input type="text" id="data" name="data" required>
+
+        <label for="algo">Algorithm:</label>
+        <input type="text" id="algo" name="algo" required>
+
+        <label for="format">Format:</label>
+        <select id="format" name="format">
+            <option value="json">JSON</option>
+            <option value="xml">XML</option>
+            <option value="txt">TXT</option>
+        </select>
+
+        <button type="submit">Download File</button>
+    </form>
+</body>
+</html>
